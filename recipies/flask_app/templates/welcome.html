@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>WELCOME {{user['first_name']}}</h1>
+    <h3>all posted recipies</h3>
+    <div style="margin-left: 70%;">
+        <a href="/create_post">Create</a> 
+        <a href="/log_out">Log-Out</a>
+    </div>
+    <div style="display: flex;align-items: center;">
+        <table style="width: 80%;">
+            <tbody style= "width: 80%;">
+                <tr style="width: 70%;">
+                    <th>Name</th>
+                    <th>Under</th>
+                    <th>posted By</th>
+                    <th>Actions</th>
+                </tr>
+                <tr>
+                    <div>
+                        <td style="margin-right: 10px;text-align: center;"><a href="">view </a><a href=""> edit </a><a href=""> delete</a></td>
+                    </div>
+                </tr>
+            </tbody>
+        </table> 
+    </div> 
+</body>
+</html>

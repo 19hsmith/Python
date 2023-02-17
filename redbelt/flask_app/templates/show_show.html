@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ROCK ON {{session['name']}}</h1>
+    <h1>My Bands:</h1>
+    <a href="/logged_in" style="margin-left: 80%;">Dashboard</a>
+    <a href="/log_out" style="margin-left: 5%;">logout</a>
+    <div style="border: 2px solid black;">
+        {%for band in bands %}
+            <h3 style="margin-bottom: 30px;">Name:{{band.band}}</h3>
+            <h3 style="margin-bottom: 30px;">Genre:{{band.genre}}</h3>
+            <h3 style="margin-bottom: 180px;">Home City:{{band.homecity}}</h3>
+            <a href="/edit_band/{{band.id}}"> edit </a>
+            <a href="/delete_band/{{band.id}}"> delete</a>
+        {% endfor %}
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Edit recipe!</h1>
+    <div>
+        <a href="" style="margin-left: 80%;">back to recipies </a>
+        <a href="('/log_out')" style="margin-left: 5%;"> logout</a>
+    </div>
+    <form action="">
+        <label for="name">recipe name</label><br>
+        <input type="text" id="recipename" name="recipename" value="" size="50"><br>
+        <label for="description">description</label><br>
+        <input type="text" id="description" name="description"  value="" style="height: 200px; width: 300px;"><br>  
+        <label for="instructions">instructions</label><br>
+        <input type="text" id="instructions" name="instructions" value="" style="height: 200px; width: 300px;"><br>
+    </form>
+    <div>
+        <form>
+            <label for="create_date">Created/Cooked at:</label>
+            <input type="date" id="create_date" name="create_date">
+            <h3>Longer than 30 minutes?</h3>
+            <input type="radio" id="yes" name="yesorno" value="yes">
+            <label for="yes">Yes</label><br>
+            <input type="radio" id="no" name="yesorno" value="no">
+            <label for="no">No</label>
+        </form>
+    </div>
+    <input type="submit" style='margin-top: 20px;'>
+</body>
+</html>

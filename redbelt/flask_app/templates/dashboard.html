@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Register</title>
+</head>
+<body style="display: flex;">
+        <div style="width: 40%; margin: 50px;">
+        {% with messages = get_flashed_messages(category_filter = ['register'] ) %}     
+            {% if messages %}
+        <div style="display: flex; flex-direction: column;">                            
+                {% for message in messages %}            
+                    <p>{{message}}</p>                   
+                {% endfor %}
+        </div>
+            {% endif %}
+        {% endwith %}
+        <h1>Register</h1>
+            <form action="/register" method="post" style="display: flex; flex-direction: column; width: 100px;">
+                <label for="first_name">First Name:</label>
+                <input type="text" name="first_name" style="margin-bottom: 30px">
+                <label for="last_name">Last Name:</label>
+                <input type="text" name="last_name" style="margin-bottom: 30px">
+                <label for="email">Email:</label>
+                <input type="text" name="email" style="margin-bottom: 30px">
+                <label for="password">Password:</label>
+                <input type="password" name="password" style="margin-bottom: 30px">
+                <label for="confirm_password">Confirm Password:</label>
+                <input type="password" name="confirm_password" style="margin-bottom: 30px">
+                <button type="submit">Register</button>
+            </form>
+    </div> 
+    <div style="width: 40%; margin: 50px;">
+        {% with messages = get_flashed_messages(category_filter = ['log_in']) %}     
+            {% if messages %}
+                <div style="display: flex; flex-direction: column;">                            
+                    {% for message in messages %}            
+                        <p>{{message}}</p>                   
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}   
+        <h1>Log-In</h1>
+            <form action="/log_in" method="post" style="display: flex;flex-direction: column; width: 100px;">
+                <label for="email">Email:</label>
+                <input type="text" name="email" style="margin-bottom: 30px">
+                <label for="password">Password:</label>
+                <input type="password" name="password" style="margin-bottom: 30px">
+                <button type="submit">Log-In</button>
+            </form>
+
+    </div>  
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>{{session['name']}}</h1>
+    <h3>all bands</h3>
+    <div style="margin-left: 70%;">
+        <a href="/show_band/{{session['id']}}" style="margin-right: 10px;">view </a>
+        <a href="/add_band" style="margin-right: 10px;">New Band</a> 
+        <a href="/log_out">Log-Out</a>
+    </div>
+    <div style="display: flex;align-items: center;">
+        <table style="width: 80%;">
+            <tbody style= "width: 80%;">
+                <tr style="width: 70%;">
+                    <th>Name</th>
+                    <th>Founding Member</th>
+                    <th>Genre</th>
+                    <th>Actions</th>
+                </tr>
+                {% for band in bands%}
+                <tr style="text-align: center;">
+                    <td>{{band.band}}</td>
+                    <td>{{band.user_info[0]}} {{band.user_info[1]}}</td>
+                    <td>{{band.genre}}</td>
+                    {% if session['id'] == band.user_id%}
+                    <td style="margin-right: 10px;text-align: center;">
+                        <a href="/edit_band/{{band.id}}"> edit </a>
+                        <a href="/delete_band/{{band.id}}"> delete</a>
+                    </td>
+                    {% endif %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table> 
+    </div> 
+</body>
+</html>
