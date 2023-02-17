@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey</title>
+</head>
+<body style="display: flex;flex-direction: column;align-items: center;">
+    <h1 style="color: brown;">Dojo Survey</h1>
+    <form action="/process" style="display: flex;flex-direction: column;width: 15%;" method="POST">
+        <input type="text" placeholder="Name" name="name">
+        <select name="location">
+            <option value="California">California</option>
+            <option value="Philadelphia">Philadelphia</option>
+            <option value="Boston">Boston</option>
+            <option value="Texas">Texas</option>
+        </select>
+        <select name="Favorite">
+            <option value="Python">Python</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="Java">Java</option>
+            <option value="C++">C++</option>
+        </select>
+        <h5 style="padding: 0;margin: 0;">Comments</h5>
+        <textarea rows = "5" cols = "40" name="Comments"></textarea>
+        <input type="submit" value ="Submit" name="action1"/>
+    </form>
+
+
+</body>
+</html>
